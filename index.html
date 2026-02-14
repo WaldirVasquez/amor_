@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <title>A Love Letter</title>
+    <title>Para mi AMOR</title>
     <link rel="icon" type="image/x-icon" href="https://i.loli.net/2021/06/03/lFg2V4WUcmkB98G.png">
     <meta name="language" content="en-US">
     <meta name="title" content="Student Sun">
@@ -47,7 +47,9 @@
         </div>
     </div>
 
-    <audio preload="auto" autoplay="" id="media" src="love1.mp3" autoplay preload loop="loop"></audio>
+    <audio id="media" loop>
+  <source src="./love1.mp3" type="audio/mpeg">
+</audio>
 
     <script>
         (function () {
@@ -227,6 +229,18 @@ function scaleScene() {
 
 window.addEventListener("resize", scaleScene);
 window.addEventListener("load", scaleScene);
+</script>
+<script>
+  const audio = document.getElementById("media");
+
+  function playAudio() {
+    audio.play().catch(() => {});
+    document.removeEventListener("click", playAudio);
+    document.removeEventListener("touchstart", playAudio);
+  }
+
+  document.addEventListener("click", playAudio);
+  document.addEventListener("touchstart", playAudio);
 </script>
 
 </body>
