@@ -1,0 +1,178 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #e7b7bf;
+	font-size: 20px;
+	font-family: '微软雅黑', '宋体', sans-serif;
+	color: #000000;
+	overflow: auto
+}
+
+a {
+	color: #000;
+	font-size: 14px;
+}
+
+#main {
+	width: 100%;
+}
+
+#wrap {
+  position: relative;
+  width: 1100px;
+  height: 680px;
+  margin: 0 auto;
+  transform-origin: top center;
+}
+
+#canvas {
+  width: 1100px;
+  height: 680px;
+  display: block;
+}
+
+
+#text {
+	width: 400px;
+	height: auto;
+	left: 60px;
+	top: 80px;
+	position: absolute;
+}
+
+#code {
+	display: none;
+	font-size: 16px;
+}
+
+#clock-box {
+	position: absolute;
+	left: 60px;
+	top: 550px;
+	font-size: 28px;
+	display: none;
+}
+
+#clock-box a {
+	font-size: 28px;
+	text-decoration: none;
+}
+
+#clock {
+	margin-left: 48px;
+}
+
+#clock .digit {
+	font-size: 64px;
+}
+
+
+
+#error {
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 60px;
+	display: none;
+}
+
+.hand {
+	cursor: pointer;
+}
+
+.say {
+	margin-left: 5px;
+}
+
+.space {
+	margin-right: 150px;
+}
+
+@media (max-width: 768px) {
+
+  body {
+    font-size: 16px;
+  }
+
+  #text {
+    position: relative;
+    width: 90%;
+    height: auto;
+    left: 0;
+    top: 0;
+    margin: 20px auto 0;
+    text-align: center;
+  }
+
+  #code {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  #clock-box {
+    position: relative;
+    width: 100%;
+    left: 0;
+    top: 0;
+    margin: 20px auto 0;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  #clock {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  #clock .digit {
+    font-size: 32px;
+  }
+
+  a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  #clock-box {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: 30px auto 0;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  #clock {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  #clock .digit {
+    font-size: 28px;
+  }
+}
+#poem-box {
+  height: 220px;          /* ajusta si quieres */
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  #poem-box {
+    height: 260px;        /* un poco más alto en móvil */
+  }
+}
+@media (max-width: 768px) {
+  #clock-box {
+    position: fixed;
+    bottom: 15px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    background: rgba(255, 192, 203, 0.85);
+    padding: 6px 0;
+    z-index: 999;
+  }
+}
