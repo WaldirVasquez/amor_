@@ -47,9 +47,12 @@
         </div>
     </div>
 
-    <audio id="media" loop>
-  <source src="./love1.mp3" type="audio/mpeg">
+ <div id="heart"></div>
+
+<audio id="media" loop preload="auto" playsinline>
+  <source src="love1.mp3" type="audio/mpeg">
 </audio>
+
 
     <script>
         (function () {
@@ -233,15 +236,18 @@ window.addEventListener("load", scaleScene);
 <script>
   const audio = document.getElementById("media");
 
-  function playAudio() {
+  function activarAudio() {
+    audio.muted = false;
     audio.play().catch(() => {});
-    document.removeEventListener("click", playAudio);
-    document.removeEventListener("touchstart", playAudio);
+    document.removeEventListener("click", activarAudio);
+    document.removeEventListener("touchstart", activarAudio);
   }
 
-  document.addEventListener("click", playAudio);
-  document.addEventListener("touchstart", playAudio);
+  document.addEventListener("click", activarAudio);
+  document.addEventListener("touchstart", activarAudio);
 </script>
+
+
 
 </body>
 
