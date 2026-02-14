@@ -234,19 +234,17 @@ window.addEventListener("resize", scaleScene);
 window.addEventListener("load", scaleScene);
 </script>
 <script>
-  const audio = document.getElementById("media");
+const canvas = document.getElementById("canvas");
+const audio = document.getElementById("media");
 
-  function activarAudio() {
-    audio.muted = false;
+canvas.addEventListener("touchstart", iniciar, { passive: true });
+canvas.addEventListener("click", iniciar);
+
+function iniciar() {
     audio.play().catch(() => {});
-    document.removeEventListener("click", activarAudio);
-    document.removeEventListener("touchstart", activarAudio);
-  }
+}
 
-  document.addEventListener("click", activarAudio);
-  document.addEventListener("touchstart", activarAudio);
 </script>
-
 
 
 </body>
